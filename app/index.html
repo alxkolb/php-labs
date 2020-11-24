@@ -32,7 +32,7 @@
         </form>
         <div>
             <? if (isset($_REQUEST["act"])) { ?>
-            Статус:
+            <b>Ответ:</b>
             <?= Task7::{$_REQUEST["act"]}() ?>
             <? } ?>
         </div>
