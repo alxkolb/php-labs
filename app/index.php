@@ -1,3 +1,3 @@
 <?php
-$title = "Test";
+$title = "ПР №4, вариант №5";
 include('index.html');
