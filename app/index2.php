@@ -1,5 +1,5 @@
 <?php
-$title = "ПР №1";
+$title = "ПР №2, часть 2";
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -45,7 +45,7 @@ $title = "ПР №1";
     <?php if (isset($_REQUEST['task'])) { ?>
     <div>
         <h2>Ответ:</h2>
-        <?php require("tasks.php"); ?>
+        <?php require("task2.php"); ?>
     </div>
     <?php } ?>
 </body>
