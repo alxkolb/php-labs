@@ -37,8 +37,8 @@ function factorial(int $val) {
     <input type="submit" value="Отправить">
 </form>
 <div>
-    <? if ($_REQUEST["task"] == 7) { ?>
-    Ответ:    
+    <?php if ($_REQUEST["task"] == 7) { ?>
+    Ответ:
     <?= calc($_REQUEST["k"]) ?>
-    <? } ?>
+    <?php } ?>
 </div>
