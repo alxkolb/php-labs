@@ -5,3 +5,5 @@ function p($string) {
 function go($link) {
     header("Location: $link", true);
 }
+// $timeFormat = "d.m.Y H:i";
+$timeFormat = "d.m.Y";

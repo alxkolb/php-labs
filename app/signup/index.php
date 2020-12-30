@@ -16,7 +16,7 @@ if (isset($_SESSION['login'])) {
         }
         form {
             position: relative;
-            left: 40%;
+            left: 30%;
         }
     </style>
 <form method="get">
