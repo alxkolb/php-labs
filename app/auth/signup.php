@@ -5,7 +5,7 @@ require_once "../html.php";
 
 if (isset($_SESSION['login'])) {
     p("Разлогиньтесь");
-    // go("/");
+    go("/");
 } else {
 ?>
 <h1 style="text-align: center;">Регистрация</h1>
@@ -38,7 +38,6 @@ if (isset($_SESSION['login'])) {
         $db = Connection::connect();
         $sql = "insert into users (login, password, pw_hash, name, email, priveleges) values
         ('$login', '$password', 'bcrypt', '$name', '$email', 'user')";
-        p($sql);
         $isAdded = $db->query($sql);
         p("<p>".($isAdded ? "Успешно" : "Ошибка: логин уже занят")."</p>");
     }
