@@ -6,14 +6,6 @@ require_once "../html.php";
 if (!isset($_SESSION['login'])) {
     go("/");
 } else { ?>
-<style>
-    .change-data {
-        display: none;
-    }
-    .change-data:target {
-        display: block;
-    }
-</style>
 <script>
     document.addEventListener("DOMContentLoaded", function (e) {
         const regexpr = /#[a-z\-]*$/gm;
@@ -21,6 +13,7 @@ if (!isset($_SESSION['login'])) {
             document.location.href = document.location.href.replace(regexpr, '');
     });
 </script>
+<div class="center">
     <div>
         <?php
         $connection = Connection::connect();
@@ -34,7 +27,7 @@ if (!isset($_SESSION['login'])) {
         <div id="change-name" class="change-data">
             <form method="post">
                 <input type="text" name="new-name" required placeholder="Новое имя" />
-                <input type="submit" value="Сохранить">
+                <br/><input type="submit" value="Сохранить">
             </form>
             <?php
             if (isset($_REQUEST['new-name'])) {
@@ -48,7 +41,7 @@ if (!isset($_SESSION['login'])) {
         <div id="change-email" class="change-data">
             <form method="post">
                 <input type="email" name="new-email" required placeholder="Новая почта" />
-                <input type="submit" value="Сохранить">
+                <br/><input type="submit" value="Сохранить">
             </form>
             <?php
             if (isset($_REQUEST['new-email'])) {
@@ -58,6 +51,7 @@ if (!isset($_SESSION['login'])) {
             }
             ?>
         </div>
-        <a href="change-pass.php">Изменить пароль</a>
+        <p><a href="change-pass.php">Изменить пароль</a></p>
     </div>
+</div>
 <?php }
