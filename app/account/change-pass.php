@@ -1,8 +1,7 @@
 <?php
-session_start();
 require_once "../connection.php";
 require_once "../utils.php";
-include "../html.php";
+require_once "../html.php";
 
 if (!isset($_SESSION['login'])) {
     go("/");

@@ -1,8 +1,7 @@
 <?php
 require_once "../connection.php";
-require "../utils.php";
-session_start();
-include "../html.php";
+require_once "../utils.php";
+require_once "../html.php";
 
 $connection = Connection::connect();
 $sql = "select * from auctions";
